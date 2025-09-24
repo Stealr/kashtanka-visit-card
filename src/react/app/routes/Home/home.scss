@@ -10,13 +10,13 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 4rem;
-
-    height: 100vh;
     text-align: center;
 
     svg {
         justify-self: center;
     }
+
+    height: 100%;
 }
 
 .header {
