@@ -1,0 +1,42 @@
+@use './variables' as *;
+
+html {
+    font-size: var(--global-scale);
+    font-family: 'Manrope', sans-serif;
+
+    background: linear-gradient(130deg, #7f5fb9, #1d7dc5);
+    color: white;
+
+    font-size: 70%;
+
+    @media (max-width: 1920px) {
+        font-size: 62.5%;
+    }
+
+    @media (max-width: 1550px) {
+        font-size: 60%;
+    }
+
+    @media (max-width: 1550px) {
+        font-size: 56%;
+    }
+
+    @media (max-width: 1250px) {
+        font-size: 48%;
+    }
+}
+
+main {
+    margin: 0 auto;
+    max-width: 100rem;
+    padding: 0 1.5rem;
+    // padding-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+    font-family: 'Manrope', sans-serif;
+}

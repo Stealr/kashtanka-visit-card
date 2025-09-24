@@ -1,0 +1,24 @@
+@use '@styles/variables' as *;
+
+.actionBtn {
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 0.8rem;
+    background-color: #560eb3;
+    transition: background 0.3s ease;
+
+    padding: 1rem 5.2rem;
+
+    color: white;
+
+    &:hover {
+        background-color: #5d10c2;
+    }
+
+    &:active {
+        background-color: #6911dc;
+    }
+}
