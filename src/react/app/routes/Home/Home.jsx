@@ -20,12 +20,20 @@ function Home() {
         setSubmitStatus(null);
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            const response = await fetch('url', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(emailValue),
+            });
 
-            console.log('Email отправлен:', emailValue);
-
-            setSubmitStatus('success');
-            setEmailValue('');
+            if (response.ok) {
+                setSubmitStatus('success');
+                setEmailValue('');
+            } else {
+                setSubmitStatus('error');
+            }
 
             setTimeout(() => {
                 setSubmitStatus(null);
@@ -88,13 +96,13 @@ function Home() {
                         </div>
                     )}
                 </div>
+            </div>
 
-                <div className="contacts">
-                    <p>Контакты для сотрудничества</p>
+            <div className="contacts">
+                <p>Контакты для сотрудничества</p>
 
-                    <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-                    <a href="mailto:kashanka@mail.ru">kashanka@mail.ru</a>
-                </div>
+                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                <a href="mailto:kashanka@mail.ru">kashanka@mail.ru</a>
             </div>
 
             <p className="company">© ООО «Формула», 2024—2025</p>
